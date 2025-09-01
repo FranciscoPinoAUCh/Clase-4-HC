@@ -1,3 +1,28 @@
+const trabajos = [
+    {
+        foto: "https://franciscopinoauch.github.io/Clase-4-HC/img/luz.webp",
+        titulo:"Objeto de Luz",
+        descripcion:"Trabajo de Proyecto II donde se buscaba la interaccion de luz con formas de alambre y papeles de colores",
+    },
+    {
+        foto: "https://franciscopinoauch.github.io/Clase-4-HC/img/capsula.webp",
+        titulo:"Capsula del tiempo",
+        descripcion:"Trabajo de Proyecto II donde se buscaba inmortalizar un objeto a traves de su grafica e interpretacion",
+    },
+    {
+        foto: "https://franciscopinoauch.github.io/Clase-4-HC/img/guante.webp",
+        titulo:"Guantes Magnetix",
+        descripcion:"Trabajo de Ergonomia y Factores Humanos donde se buscaba crear un guante para una tarea en especifico, en este caso, manipular clavos",
+    },
+    {
+        foto: "https://franciscopinoauch.github.io/Clase-4-HC/img/tinta.webp",
+        titulo:"EcoPintura para Ecocarteles",
+        descripcion:"Trabajo de Proyecto III que buscaba ocupar residuos del Barrio La Vega para crear una pintura a base de vegetales y carteles de carton reciclado",
+    },
+];
+
+
+
 const datos = [
     {
         id: 1,
@@ -210,7 +235,7 @@ var otrxs = [];
 
 
 datos.forEach((x) => {
-    if (x.nombre == "Martina Urzúa") {
+    if (x.nombre == "Francisco Pino") {
         yo = x;
     } else {
         otrxs.push(x);
@@ -236,10 +261,15 @@ function setup() {
     //Lo que sigue es JavaScript a secas
     otrxs.forEach((x)=>{
         document.querySelector("#otredad").innerHTML += `<div><a href="${x.cuenta}"><img src="${x.foto}" title="${x.esperado}"></a></div>`;
-    })
+    });
     //Ahora vuelvo al p5.js
     noStroke();
 }
+    trabajos.forEach((x)=>{
+        document.querySelector("#portafolio").innerHTML += `<div><img src="${x.foto}"><p>${x.titulo}</p></div>`;
+    });
+
+    document.querySelector("#portafolio").innerHTM = yo.nombre;
 
 function draw() {
     background("white");
